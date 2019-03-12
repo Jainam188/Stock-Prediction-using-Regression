@@ -15,7 +15,7 @@ Finally i have split my data using sklearn train_test_split and fited the model 
 
     Mean square error is 118.829787....
 
-    Model Accuracy is 77%.
+    Model Score is 77%.
 
 I have also attached the Scatter plot image.
 
