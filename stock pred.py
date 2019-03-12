@@ -53,7 +53,7 @@ preds = regressor.predict(xtest)
 #Finding The Error and Checking The Score
 rms = np.sqrt(np.mean(np.power((np.array(ytest)-np.array(preds)), 2)))
 print(rms)
-print('Accuracy of the Linear Regression Model', regressor.score(xtest, ytest))
+print('Score of the Linear Regression Model', regressor.score(xtest, ytest))
 
 #plotting The Prediction With Actual Value
 plt.scatter(xtrain, ytrain, color = 'red')
