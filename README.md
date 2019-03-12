@@ -13,9 +13,9 @@ I personally think that to work with date and as specially putting date in model
 
 Finally i have split my data using sklearn train_test_split and fited the model and plot it in using scatter plot.
 
-  Mean square error is 118.829787....
+    Mean square error is 118.829787....
 
-  Model Accuracy is 77%.
+    Model Accuracy is 77%.
 
 I have also attached the Scatter plot image.
 
