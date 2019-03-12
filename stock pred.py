@@ -9,7 +9,10 @@ import datetime
 df = pd.read_csv('RELIANCE.NS.csv')
 df.dropna(inplace=True)
 
-#Get Data From Quandl
+print(data.head())
+print(data.info())
+
+
 df = df.reset_index()
 prices = df['Close'].tolist()
 dates = df.index.tolist()
@@ -41,15 +44,18 @@ regressor = LinearRegression()
 # #Splitting the dataset into the Training set and Test set
 xtrain, xtest, ytrain, ytest = train_test_split(dates, prices, test_size=0.25, random_state=42)
 
+#Fitting The Model
 regressor.fit(xtrain, ytrain)
 
 # pred = regressor.predict(xtrain)
 preds = regressor.predict(xtest)
 
-
+#Finding The Error and Checking The Score
 rms = np.sqrt(np.mean(np.power((np.array(ytest)-np.array(preds)), 2)))
 print(rms)
 print('Accuracy of the Linear Regression Model', regressor.score(xtest, ytest))
+
+#plotting The Prediction With Actual Value
 plt.scatter(xtrain, ytrain, color = 'red')
 plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
 plt.title('Actual Price VS Predicted Price')
