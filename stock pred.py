@@ -56,7 +56,8 @@ print(rms)
 print('Score of the Linear Regression Model', regressor.score(xtest, ytest))
 
 #plotting The Prediction With Actual Value
-plt.scatter(xtrain, ytrain, color = 'red')
-plt.plot(xtrain, regressor.predict(xtrain), color = 'blue')
+plt.scatter(xtrain, ytrain, color='red', label='Actual Price')
+plt.plot(xtrain, regressor.predict(xtrain), color='blue', label='Predicted Price')
 plt.title('Actual Price VS Predicted Price')
+plt.legend()
 plt.show()
